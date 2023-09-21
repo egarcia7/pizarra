@@ -1,0 +1,68 @@
+/*Estilos generales para todos los proyectos*/
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-fondo: rgb(218, 214, 214);
+    --color-lienzo: hsla(350, 50%, 100%, .5);
+    --borde-lienzo: rgba(59, 58, 58, 0.9);
+}
+
+body {
+    margin: 0.2%;
+    font-family: sans-serif;
+    color: #333;
+    line-height: 1.5;
+    background-color: var(--bg-fondo);
+}
+
+p {
+    text-align: center;
+    font-size: 1em;
+}
+
+canvas {
+    box-shadow: 0 0 0 1px var(--borde-lienzo);
+    background: var(--color-lienzo); 
+}
+
+canvas:hover {
+    box-shadow: 0 0 10px 1px var(--borde-lienzo);
+}
+
+.container {
+    width: 300px;
+    height: 300px;
+    padding: 0px;
+}
+
+.utiles {
+    text-align: center;
+}
+
+.utiles:hover,
+.utiles-cursor:hover {
+    transform: scale(1.05);
+}
+
+.utiles-lapiz:active,
+.utiles-borrador:active,
+.utiles-cursor:active {
+    transform: scale(.9);
+    opacity: .6;
+}
+
+.utiles-cursor {
+    display: none;
+    position: absolute;
+    top: 1em;
+    margin: 0 302px;
+}
+
+.utiles-borrador {
+    display: none;
+}
